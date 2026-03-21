@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Movies Grid */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Search Input */
+.search {
+  width: 300px;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Favorites link button */
+.favorites-link {
+  text-decoration: none;
+  color: white;
+  background-color: #ff4d4d;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.favorites-link:hover {
+  background-color: #e04343;
+}
+
+/* Back button (MovieDetail) */
+.movie-detail {
+  text-align: center;       /* bütün child elementləri horizontal mərkəzləşdirir */
+  padding: 20px;
+}
+
+.movie-detail .poster {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1rem auto;  /* horizontal mərkəz + alt boşluq */
+}
+
+.movie-detail .year {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.movie-detail .trailer iframe {
+  max-width: 560px;
+  width: 100%;
+  height: 315px;
+  border: 0;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: white;
+  background-color: #ff4d4d;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #e04343;
 }
